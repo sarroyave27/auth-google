@@ -8,7 +8,7 @@ loginRouter.get("/google", (req, res)=> {
     const email = req.user.emails[0].value;
 
     res.render("backoffice", {
-        nombre:""
+        nombre:name
     });
 
 });

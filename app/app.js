@@ -7,6 +7,7 @@ import ejs from "ejs";
 import path from "path";
 import * as url from "url";
 import routeHome from "./routes/backoffice.routes.js";
+import route from "./routes/home.routes.js";
 
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.set("view engine", "ejs");
 
 app.use(express.json());
 app.use(passport.initialize());
+app.use(express.static(__dirname + '../public'));
 
 app.use("/auth", passport.authenticate("auth-google",{
 
@@ -30,6 +32,8 @@ app.use("/auth", passport.authenticate("auth-google",{
     session:false
 }), loginRouter);
 app.use("/", routeHome);
+
+app.use("/", route);
 
 // app.get("/", (req, res)=>{
 //     res.send("Hola");
