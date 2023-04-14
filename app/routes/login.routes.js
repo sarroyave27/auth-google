@@ -3,7 +3,14 @@ import { Router } from "express";
 const loginRouter = Router();
 
 loginRouter.get("/google", (req, res)=> {
-    res.send(req.user);
+    const id = req.user.id;
+    const name = req.user.displayName;
+    const email = req.user.emails[0].value;
+
+    res.render("backoffice", {
+        nombre:""
+    });
+
 });
 
 export { loginRouter };
