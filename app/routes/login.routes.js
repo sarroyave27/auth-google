@@ -9,7 +9,9 @@ loginRouter.get("/google", (req, res)=> {
 
     res.render("backoffice", {
         nombre:name
+        
     });
+    // res.redirect("backoffice")
 
 });
 
