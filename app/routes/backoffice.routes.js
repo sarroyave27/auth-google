@@ -3,7 +3,7 @@ import { Router } from "express";
 const router = Router();
 
 router.get("/back", (req, res)=>{
-    res.render("index", {nombre:""});
+    res.render("backoffice", {nombre:""});
 })
 
 export default router;

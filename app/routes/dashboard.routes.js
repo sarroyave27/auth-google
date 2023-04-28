@@ -2,7 +2,7 @@ import { Router } from "express";
 
 const dash = Router();
 
-dash.get("/dashboard", (req, res) => {
+dash.get("/inicio", (req, res) => {
     res.render("dash");
 });
 

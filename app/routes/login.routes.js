@@ -6,12 +6,12 @@ loginRouter.get("/google", (req, res)=> {
     const id = req.user.id;
     const name = req.user.displayName;
     const email = req.user.emails[0].value;
-
-    res.render("backoffice", {
-        nombre:name
+    res.redirect("/dashboard/inicio")
+    // res.render("ba", {
+    //     nombre:name
         
-    });
-    // res.redirect("backoffice")
+    // });
+    // // res.redirect("backoffice")
 
 });
 
